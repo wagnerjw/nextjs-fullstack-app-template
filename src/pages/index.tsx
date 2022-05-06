@@ -14,11 +14,13 @@ const Home: NextPageWithLayout = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome To <a href="https://next.org">Next.js!</a>
-        </h1>
-        <CatCard {...mockCatCardProps.base} />
+      <main>
+        <div className="bg-gradient-to-r from-cyan-500 to-blue-500">
+          <h1 className={styles.title}>
+            Welcome To <a href="https://next.org">Next.js!</a>
+          </h1>
+          <CatCard {...mockCatCardProps.base} />
+        </div>
       </main>
     </div>
   );
