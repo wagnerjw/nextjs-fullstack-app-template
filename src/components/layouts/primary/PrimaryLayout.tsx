@@ -1,26 +1,27 @@
 import Head from 'next/head';
-// import Footer from '../../navigation/footer/Footer';
-// import Header from '../../navigation/header/Header';
+import { ReactNode } from 'react';
+import Footer from '../../navigation/footer/Footer';
+import Header from '../../navigation/header/Header';
 
-export interface IPrimaryLayout extends React.ComponentPropsWithoutRef<'div'> {
+export interface IPrimaryLayout {
+  children: ReactNode;
   justify?: 'items-center' | 'items-start';
 }
 
 const PrimaryLayout: React.FC<IPrimaryLayout> = ({
   children,
   justify = 'items-center',
-  ...divProps
 }) => {
   return (
     <>
       <Head>
         <title>NextJs Fullstack App Template</title>
       </Head>
-      <div {...divProps} className={`min-h-screen flex flex-col ${justify}`}>
-        {/* <Header /> */}
+      <div className={`min-h-screen flex flex-col ${justify}`}>
+        <Header />
         <main className="px-5">{children}</main>
         <div className="m-auto" />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );
