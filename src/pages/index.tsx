@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import CatCard from '../components/cards/cat/CatCard';
-import { mockCatCardProps } from '../components/cards/cat/CatCard.mocks';
+import ExampleCard from '../components/cards/example/ExampleCard';
+import { mockExampleCardProps } from '../components/cards/example/ExampleCard.mocks';
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 import styles from '../styles/Home.module.css';
 import { NextPageWithLayout } from './page';
@@ -19,7 +19,7 @@ const Home: NextPageWithLayout = () => {
           <h1 className={styles.title}>
             Welcome To <a href="https://next.org">Next.js!</a>
           </h1>
-          <CatCard {...mockCatCardProps.base} />
+          <ExampleCard {...mockExampleCardProps.base} />
         </div>
       </main>
     </div>

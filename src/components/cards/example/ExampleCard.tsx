@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import styles from './CatCard.module.css';
+import styles from './ExampleCard.module.css';
 
-export interface ICatCard {
+export interface IExampleCard {
   tag: string;
   title: string;
   body: string;
@@ -9,7 +9,13 @@ export interface ICatCard {
   time: string;
 }
 
-const CatCard: React.FC<ICatCard> = ({ tag, title, body, author, time }) => {
+const ExampleCard: React.FC<IExampleCard> = ({
+  tag,
+  title,
+  body,
+  author,
+  time,
+}) => {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
@@ -41,4 +47,4 @@ const CatCard: React.FC<ICatCard> = ({ tag, title, body, author, time }) => {
   );
 };
 
-export default CatCard;
+export default ExampleCard;
