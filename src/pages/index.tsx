@@ -19,7 +19,7 @@ const Home: NextPageWithLayout = () => {
       />
       <Search />
       <p>
-        Google offered in:{' '}
+        Google also offered in:{' '}
         <Link href="/" locale={locale === 'en' ? 'ge' : 'en'}>
           <a className="underline text-blue-600"> Deutsch</a>
         </Link>
